@@ -1,0 +1,24 @@
+@media only screen and (max-width: 430px) {
+    #profile_content{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    #header{
+        grid-template-columns: 1fr;
+        width: 300px;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        background-color: rgba(56, 56, 56, 0.7);
+        backdrop-filter: blur(5px);
+    }
+    #btn_edit_user_info{
+        position: absolute;
+        margin-top: 40px;
+        margin-right: 40px;
+    }
+    #header p{
+        margin-right: 0
+    }
+  }
+  

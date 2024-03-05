@@ -1,0 +1,159 @@
+/*! _____LOADING ANIMATION */
+#loading_bar {
+    display: none;
+    top: 45%;
+    left: 45%;
+    position: fixed;
+    z-index: 99;
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #ff6347;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+/*! _____MAIN UI */
+#ui_edit_profile{
+    display: none;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(7px);
+    justify-content: center;
+    align-items: center;
+}
+#user_profile_form h3{
+    text-align: center;
+    margin-bottom: 30px;
+}
+#user_profile_form{
+    display: inline;
+    width: 400px;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+label {
+    font-size: 14px;
+    margin-top: 10px 0;
+    display: inline-block;
+    color: #a7b0b9;
+    padding: 0;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #6c757d;
+    background-color: #444;
+    color: #f8f9fa;
+}
+
+input[type="submit"] {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #6c757d;
+    background-color: #ff7f50;
+    color: #222;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input:focus {
+    outline: none;
+    border-color: #92a3b4;
+}
+
+input[type="submit"]:hover {
+    background-color: #ff6347;
+}
+#usr_nama{
+    font-size: 20px !important;
+    font-weight: bold;
+    color: #ff7f50;
+}
+
+/*! _____BTN CLOSE */
+#btn_usr_edit_close{
+    background: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+#img_btn_close{
+    transition: height 0.3s ease;
+    background-color: #ff7f50;
+    border-radius: 50%;
+    width: 30px;
+}
+
+.mark{
+    box-shadow: inset 0 0 30px red;
+    transition: .3s;
+}
+/*! _____LOKASI */
+#ui_edit_lokasi {
+    background-color: #222;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+
+  #ui_edit_lokasi label {
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  #ui_edit_lokasi select {
+    padding: 10px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    width: 200px;
+  }
+
+  #ui_edit_lokasi option {
+    background-color: #333;
+    color: #fff;
+  }
+
+  #ui_edit_lokasi option:hover {
+    background-color: #555;
+  }
+
+  /*! UI STRIKE */
+.notification {
+  z-index: 10;
+  width: 200px;
+  height: 50px;
+  background-color: #33333345;
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  position: fixed;
+  right: -300px;
+  top: 10%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  display: grid;
+  font-weight: bold;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  transition: all 0.2s ease; /* Added transition property */
+}

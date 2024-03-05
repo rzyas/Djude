@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="pavicon/rzyas_pav.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_body.css">
+    <link rel="stylesheet" href="style_confirm_reset.css">
+    <link rel="stylesheet" href="style_profile.css">
+    <link rel="stylesheet" href="style_ui_edit_profile.css">
+    <link rel="stylesheet" href="style_mobile_resize.css">
+    <link rel="stylesheet" href="style_black_market.css">
+
+</head>
+<body>
+    <!--! UI NOTIFIKASI -->
+    <div id="popup_container">
+        
+    </div>
+
+    <!--! UI STRIKE -->
+    <div id="ui_strike"></div>
+
+    <!--! _____UI LOADING -->
+    <div id="loading_container">
+        <div id="loading_bar"></div>
+    </div>
+    <!--! _____UI EDIT PROFILE -->
+    <div id="ui_edit_profile">     
+        <form id="user_profile_form">
+            <button id="btn_usr_edit_close" type="button">
+                <img id="img_btn_close" src="icon/close.svg" alt="Close Icon">
+            </button>
+            <h3>EDIT INFO PROFILE</h3>
+            <label for="ui_edit_nama">Nama:</label><br>
+            <input type="text" id="ui_edit_nama" name="ui_edit_nama" placeholder="Masukan nama maksimal 16 character" required><br>
+        
+            <!-- <label for="ui_edit_umur">Umur:</label><br>
+            <input type="text" id="ui_edit_umur" name="ui_edit_umur" placeholder="Masukan umur anda" required><br> -->
+            <label for="ui_edit_umur">Umur Anda:</label><br>
+            <input type="text" id="ui_edit_umur" name="ui_edit_umur" placeholder="Contoh: 25" required><br>
+
+        
+            <label for="ui_edit_pekerjaan">Pekerjaan:</label><br>
+            <input type="text" id="ui_edit_pekerjaan" name="ui_edit_pekerjaan" placeholder="Masukan status, pekerjaan, jabatan dll.."required><br>
+        
+            <!-- <label for="ui_edit_lokasi">Lokasi:</label><br>
+            <input type="text" id="ui_edit_lokasi" name="ui_edit_lokasi" placeholder="Shareloc cok baku hantam kita :v"><br> -->
+            <label for="ui_edit_lokasi">Pilih Lokasi:</label>
+            <select id="ui_edit_lokasi">
+                <option value="Neraka">Neraka</option>
+                <option value="Abyss">Abyss</option>
+                <option value="Dunia bawah">Dunia bawah</option>
+                <option value="Alam Goib">Alam Goib</option>
+                <option value="Dunia Virtual">Dunia Virtual</option>
+                <option value="Negara Bekasi">Negara Bekasi</option>
+            </select>
+        
+            <input type="submit" value="Submit">
+        </form>        
+    </div>
+    <!--! _____STAT -->
+    <div id="stat">
+        <button id="btn_stat_show">Sembunyikan <br> Informasi</button>
+        <img id="gacha_img" alt="Gacha" src="default_img/default_img.png">
+        <div id="stat_container">   
+            <p id="total_gacha">History Gacha ke: 0</p>
+            <p id="total_jp"></p>
+            <p id="total_topup">Total Top-up: 0</p>
+            <p id="total_bonus_gacha">Total Income: 0</p>
+        </div>
+    </div>
+
+    <!--! _____HEADER -->
+    <header id="header">
+        <p>My Coin: <span id="total_koin_saya">$0.00</span></p>
+
+        <div class="top-up-form">
+            <form id="currency" action="#">
+                <label id="lol" for="total_top_up">Pilih Nominal:</label>
+                <select name="total_top_up" id="total_top_up">
+                    <optgroup label="Pilih Top-Up">
+                        <option value="1000">1K</option>
+                        <option value="10000">10K</option>
+                        <option value="50000">50K</option>
+                        <option value="100000">100K</option>
+                        <option value="500000">500K</option>
+                        <option value="1000000">1M</option>
+                    </optgroup>
+                </select>
+                <button type="button" id="top-up-button">Top-Up</button>
+            </form>
+        </div>
+    </header>
+
+    <div class="background"></div>
+
+    <!--! _____MAIN CONTENT ITS HERE-->
+    <div class="content">
+        <!--! _____USER PROFILES -->
+        <div id="profile_content">
+            <div id="simple_profile">
+                <button id="btn_edit_user_info">EDIT</button>
+                <div>
+                    <img id="usr_pp" src="icon/person-circle.svg" alt="Foto Profil">
+                    <input type="file" id="file_input" style="display: none;"> <!-- Input file tersembunyi -->
+                    <button id="ganti_usr_pp">GANTI</button>
+                </div>
+                <div>
+                    <p id="usr_nama">NAMELESS</p>
+                    <p id="usr_umur">Umur: -</p>
+                    <p id="usr_pekerjaan">Pekerjaan: -</p>
+                    <p id="usr_lokasi">Lokasi: -</p>
+                </div>
+                <hr id="elem_hr">
+                <div>
+
+                </div>
+            </div>
+            
+            <!--! _____STAT -->
+            <div id="simple_statistik">
+                <div id="about_game_des">
+                    <p id="header_tentang_game">TENTANG GAME</p>
+                    <p id="tentang_game">
+                        Game ini adalah simulasi gacha yang memperlihatkan unsur perjudian. Meskipun tidak melibatkan pembayaran dengan uang sungguhan, penting untuk memahami potensi risiko yang terkait. Meskipun dapat dimainkan tanpa koneksi internet dan tidak mendukung penggunaan uang sungguhan, kami mendorong pemain untuk bertindak dengan bijak, mengontrol pengeluaran, dan bermain secara bertanggung jawab. Orang tua atau wali sebaiknya terlibat dalam permainan bagi pemain di bawah usia 18 tahun. Jika Anda memiliki pertanyaan atau kekhawatiran, silakan mencari bantuan yang tepat. Keselamatan dan kesejahteraan pengguna adalah prioritas utama kami.
+                </div>
+
+                <div id="statistik_pencapaian">
+                    <p>PENCAPAIAN STRIKE RATE GACHA</p>
+                
+                    <div id="container_pencapaian">
+                        <div>
+                            <img id="icon_pencapaian_1" src="icon/dice-outline.svg" alt="" srcset="">
+                            <p id="strike_count_1">0</p>
+                            <p>STRIKE</p>
+                        </div>
+
+                        <div>
+                            <img id="icon_pencapaian_2" src="icon/dice-outline.svg" alt="" srcset="">
+                            <p id="strike_count_2">0</p>
+                            <p>STRIKE</p>
+                        </div>
+
+                        <div>
+                            <img id="icon_pencapaian_3" src="icon/dice-outline.svg" alt="" srcset="">
+                            <p id="strike_count_3">0</p>
+                            <p>STRIKE</p>
+                        </div>
+
+                        <div>
+                            <img id="icon_pencapaian_4" src="icon/dice-outline.svg" alt="" srcset="">
+                            <p id="strike_count_4">0</p>
+                            <p>STRIKE</p>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        <div id="statistik_gacha">
+            <p>STATISTIK</p>
+            <div id="grid_bar_gacha">
+                <table id="tbl_keterangan">
+                    <th>
+                        <td id="td_keterangan_1"></td>
+                        <td id="td_keterangan_2">Bar</td>
+                        <td id="td_keterangan_3">Total</td>
+                        <td id="td_keterangan_4">Presentase</td>
+                    </th>
+                </table>
+                <!--! bar 1 here -->
+                <div id="bar_1">
+                    <img id="rate_1" src="icon/diamond.svg" alt="">
+                    <div id="bg_rate_1">
+                        <p id="main_rate1"></p>
+                    </div>
+                    <p id="rate_1_count">X0</p>
+                    <p id="rate_1_persen">0%</p>
+                </div>
+                <!--! bar 2 here -->
+                <div id="bar_2">
+                    <img id="rate_2" src="icon/diamond.svg" alt="">
+                    <div id="bg_rate_2">
+                        <p id="main_rate2"></p>
+                    </div>
+                    <p id="rate_2_count">X0</p>
+                    <p id="rate_2_persen">0%</p>
+                </div>
+                <!--! bar 3 here -->
+                <div id="bar_3">
+                    <img id="rate_3" src="icon/diamond.svg" alt="">
+                    <div id="bg_rate_3">
+                        <p id="main_rate3"></p>
+                    </div>
+                    <p id="rate_3_count">X0</p>
+                    <p id="rate_3_persen">0%</p>
+                </div>
+                <!--! bar 4 here -->
+                <div id="bar_4">
+                    <img id="rate_4" src="icon/diamond.svg" alt="">
+                    <div id="bg_rate_4">
+                        <p id="main_rate4"></p>
+                    </div>
+                    <p id="rate_4_count">X0</p>
+                    <p id="rate_4_persen">0%</p>
+                </div>
+            </div>
+        </div>
+        <hr id="elem_hr">
+        <!--! _____ USR LEVEL -->
+
+        <div id="usr_level">
+            <div id="level_container">
+                <p id="level">LEVEL 0</p>
+                <p id="jabatan">(NORMAL PEOPLE)</p>
+            </div>
+            <div id="usr_level_bar_0">
+                <div id="usr_level_bar_1"></div>
+            </div>
+            <p id="next_exp">Next EXP (0/100) 0%</p>
+        </div>
+        <hr id="elem_hr">
+        <div>
+            <div id="hasil_gacha_img">
+                <div id="bg_gacha">
+                    <p id="p0_bg_gacha">RZYAS COIN</p>
+                    <img id="img_bg_gacha" src="img_bg/bg_gacha.jpg" alt="">
+                </div>
+            </div>
+
+            <div id="gacha_box">
+                <div id="div_btn">
+                    <button id="btn_gacha"> Gacha 1x<span id="notice_harga">1000 Coin</span></button>
+                    <button id="btn_gacha_x10">Gacha 10x <span id="notice_harga">10K Coin</span></button>
+                    <button id="btn_gacha_x100">Gacha 100x<span id="notice_harga">100K Coin</span></button>
+                    <button id="btn_gacha_x1000">Gacha 1000x<span id="notice_harga">1M Coin</span></button>
+                    <button id="btn_gacha_reset">Reset</button>
+                </div>
+            </div>              
+        </div>  
+
+        <!--! _____BLACK MARKET -->
+        <div id="container_bm">
+            <p id="bm_header">BLACK MARKET</p>
+            <div id="btn_menu_bm">
+                <button id="menu_trading">Trading Market</button>
+                <button id="menu_notif">Notifikasi</button>
+                <button id="menu_store">Store (soon)</button>
+            </div>
+            <div id="bm_content">
+                <!--! BM MARKET -->
+                <div id="bm_trade">
+                    <div id="tbl_live_trade">
+                        <table id="main_table_live">
+                            <tr id="tr_header_tbl_live">
+                                <td>NO</td>
+                                <td>Item</td>
+                                <td>Nama Item</td>
+                                <td>Harga Awal</td>
+                                <td>Harga Langsung</td>
+                                <td>Aksi</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <!--! NOTIFIKASI -->
+                <div id="bm_nofikasi">
+                    <div id="notifikasi_content">
+                        <div id="main_notif">
+                            <div id="notif_0"></div>
+                            <p id="notif_1">Game Di Mulai</p>
+                            <p id="bm_waktu_start"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--! _____FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>Aprilias Cahya Putra &copy; 2024</p>
+        </div>
+    </footer>
+    <!--! _____UI CONFIRM RESET -->
+    <div id="ui_bg_reset">
+        <div id="ui_bg_reset_content">
+            <p>Peringantan</p>
+            <p>Semua hasil gacha yang terdapat dalam table akan di hapus?</p>
+            <hr>
+            <div>
+                <button id="btn_reset_gacha_yes">YA</button>
+                <button id="btn_reset_gacha_no">TIDAK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="script_coin.js"></script>
+    <script src="script_reward.js"></script>
+    <script src="script_black_market.js"></script>
+    <script src="script_confirm_reset.js"></script>
+    <script src="script_ui_edit_profile.js"></script>
+    <script src="script_statistik_gacha.js"></script>
+    <script src="script_user_pp.js"></script>
+    <script src="script_strike.js"></script>
+    <script src="script_notifikasi.js"></script>
+</body>
+</html>

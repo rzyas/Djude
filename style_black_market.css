@@ -1,0 +1,260 @@
+#container_bm{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #333;
+    border-radius: 10px;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+#bm_header{
+    margin-top: 0;
+    padding: 10px;
+    background-color: #222;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    font-size: 20px;
+}
+#bm_content{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+#bm_menu{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+#bm_menu button{
+    background-color: #333;
+    width: 100%;
+    text-align: start;
+    font-size: 12px;
+    font-weight: lighter;
+    color: #999;
+}
+#bm_menu button:hover{
+    background-color: #222;
+    color: white;
+}
+#bm_menu button:active{
+    background-color: crimson;
+    transition: .1;
+    margin-bottom: 0;
+}
+
+/*! LIVE TRADE */
+
+#tbl_live_trade{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    margin: 10px;
+}
+#tbl_live_trade table {
+    border-collapse: collapse;
+    border: none;
+}
+#tbl_live_trade table tr td {
+    padding: 7px;
+    border: 1px solid #222; /* To remove any remaining cell borders */
+}
+#tbl_live_trade table tr:nth-child(odd){
+    background-color: #333;
+}
+#tbl_live_trade table tr:nth-child(even){
+    background-color:#444;
+}
+#img_live{
+    width: 45px;
+}
+#img_live:hover{
+    scale: 3;
+    transition: .3s;
+}
+#history_td{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+#tes_warna{
+    background-color: #00800b;
+}
+#elem_tr_live{
+    justify-content: center;
+    align-items: center;
+}
+.btn_bm{
+    font-size: 12px;
+    font-weight: lighter;
+    background-color: #333;
+}
+#btn_bm:hover{
+    background-color: #222;
+    transition: .2s;
+}
+#no_td{
+    width: 30px;
+}
+#name_td{
+    width: 100px;
+}
+#img_td{
+    width: 45px;
+    text-align: center;
+}
+#btn_td{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.item_count{
+    background-color: #222;
+    font-size: 10px;
+    border-radius: 2px;
+    color: gold;
+    padding: 2px 5px;
+    font-weight: bold;
+}
+#btn_td button{
+    background-color: #222;
+    font-size: 12px;
+    font-weight: lighter;
+    padding: 10px 15px;
+    text-align: center;
+}
+#btn_td button:hover{
+    background-color: crimson;
+}
+
+/*! MAIN */
+#bm_trade{
+    display: grid;
+    background-color: #222;
+    border-radius: 0;
+    max-height: 500px;
+    overflow-x: auto;
+}
+#btn_menu_bm{
+    display: flex;
+}
+#menu_trading, #menu_notif, #menu_store{
+    font-size: 14px;
+    font-weight: lighter;
+    margin: 0;
+    border-radius: 0;
+}
+#menu_trading{
+    background-color: #222;
+    color: white;
+}
+#menu_notif{
+    background-color: #333;
+    color: #777;
+}
+#menu_store{
+    background-color: #333;
+    color: #777;
+}
+/*! NOTIFIKASI */
+#bm_nofikasi{
+    display: none;
+    background-color: #222;
+    border-radius: 0;
+    margin-bottom: 0;
+    height: 500px;
+    max-height: 500px;
+    overflow-x: auto;
+}
+#notifikasi_content{
+    display: grid;
+    background-color: #222;
+    padding: 10px 10px 0 10px;
+}
+#main_notif{
+    display: grid;
+    position: relative;
+    justify-content: center;
+    grid-template-columns: .05fr 1fr;
+    background-color: #333;
+    border-bottom: 1px solid #777;
+}
+#main_notif:hover{
+    border-bottom: 1px solid white;
+    transition: .2s;
+}
+#notif_0{
+    background-color: crimson;
+    width: 7px;
+}
+#notif_1{
+    color: #999;
+    font-size: 14px;
+    padding-top: 15px;
+    padding-bottom: 5PX;
+}
+#bm_waktu, #bm_waktu_start{
+    position: absolute;
+    font-size: 10px;
+    top: 0;
+    right: 0;
+    padding: 2px;
+    color: #999;
+    background-color: #222;
+    border-bottom-left-radius: 5px;
+}
+
+/*! POP-UP */
+#popup_container{
+    z-index: 30;
+    width: 100%;
+    display: none;
+    padding: 10px;
+    top: 0;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+}
+#popup_content{
+    border-radius: 7px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.415);
+    background-color: #333;
+    backdrop-filter: blur(5px);
+    width: 350px;
+    height: auto;
+    display: grid;
+    grid-template-columns: .05fr .15fr .8fr;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+}
+#popup_color{
+    width: 4px;
+    height: 40px;
+    border-radius: 2px;
+    background-color: crimson;
+    display: grid;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+#popup_notif_icon{
+    width: 35px;
+    height: 35px;
+    fill: crimson;
+    margin: 0;
+    padding: 0;
+}
+#popup_text_container{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+#pupup_text_0{
+    color: #cdcdcd;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+#pupup_text_1{
+    color: #888;
+    font-size: 12px;
+    font-weight: lighter;
+}

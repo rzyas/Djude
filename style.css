@@ -1,0 +1,53 @@
+.hidden {
+  display: none;
+}
+
+/* Animasi untuk gambar */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#gacha_result_img {
+  animation: fadeIn .3s ease-in-out;
+}
+
+.fadeOut {
+    animation: fadeOut .3s ease-in-out;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+.bg_white{
+    border: 3px solid white;
+}
+.bg_blue{
+    border: 3px solid rgb(55, 55, 255);
+    transition: .1s;
+}
+.bg_purple{
+    border: 3px solid rgb(255, 154, 255);
+    box-shadow: 0 0 50px rgb(255, 0, 247);
+}
+.bg_red {
+    border: 3px solid rgb(255, 154, 154);
+    box-shadow: 0 0 50px rgb(255, 0, 0);
+}
+.bg_white:hover, .bg_blue:hover, .bg_purple:hover, .bg_red:hover{
+  scale: 2;
+  transition: .3s;
+}
+
+#non_aktived{
+  display: none;
+}
