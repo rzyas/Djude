@@ -117,6 +117,10 @@ function tbl_live_trade(){
         
         let to_usd = price_item.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
         live_price_td.innerText = 0
+        live_price_td.style.minWidth = '150px'
+        price_td.style.minWidth = '150px'
+        price_td.style.minWidth = '100px'
+        name_td.style.minWidth = '75px'
         price_td.innerText = to_usd; // Perbaikan 5
 
         let get_value = price_td.innerText
